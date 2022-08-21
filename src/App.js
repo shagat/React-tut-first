@@ -8,7 +8,8 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<AllMeetupsPage />}>
+        <Route path="/">
+          <Route index element={<AllMeetupsPage />} />
           <Route path="favourite" element={<FavouritesPage />} />
           <Route path="new-meetup" element={<NewMeetupPage />} />
         </Route>
