@@ -1,14 +1,13 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import MainNavigation from "./components/layout/MainNavigation";
+import Layout from "./components/layout/Layout";
 import AllMeetupsPage from "./pages/AllMeetups";
 import FavouritesPage from "./pages/Favourites";
 import NewMeetupPage from "./pages/NewMeetup";
 
 function App() {
   return (
-    <div>
-      <MainNavigation />
+    <Layout>
       <Routes>
         <Route path="/">
           <Route index element={<AllMeetupsPage />} />
@@ -16,7 +15,7 @@ function App() {
           <Route path="new-meetup" element={<NewMeetupPage />} />
         </Route>
       </Routes>
-    </div>
+    </Layout>
   );
 }
 export default App;
